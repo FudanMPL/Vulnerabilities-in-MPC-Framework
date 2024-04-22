@@ -1,4 +1,4 @@
-## SEGV in SilentPprf.cpp
+## Requested allocation size exceeds maximum supported size
 
 
 ### Description
