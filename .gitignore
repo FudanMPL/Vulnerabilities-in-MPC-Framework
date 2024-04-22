@@ -30,3 +30,38 @@
 *.exe
 *.out
 *.app
+
+# CMake and build files
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Executables and libraries
+*.o
+*.a
+*.so
+*.dylib
+*.lib
+*.exe
+
+# IDEs and editors
+.vscode/
+.idea/
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependencies
+deps/
+vendor/
