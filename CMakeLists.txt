@@ -9,5 +9,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(recv_hook SHARED library_recv.cpp)
 
-
+target_link_libraries(recv_hook dl)
 

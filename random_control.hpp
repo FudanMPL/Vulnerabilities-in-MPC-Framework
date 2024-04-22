@@ -70,14 +70,13 @@ int open(const char *pathname, int flags, ...) {
 
   if (strcmp(pathname, "/dev/random") == 0 || strcmp(pathname, "/dev/urandom") == 0) {
 
-    if (!std::filesystem::exists("../random")) {
-      std::cerr << "../random" << " does not exist\n";
-      exit(1);
+    if (!std::filesystem::exists("./fake_random")) {
+      system("head -c 10000000 /dev/zero > ./fake_random");
     }
     if (flags & O_CREAT) {
-      return real_open("../random", flags, mode);
+      return real_open("./fake_random", flags, mode);
     } else {
-      return real_open("../random", flags);
+      return real_open("./fake_random", flags);
     }
   }
 
@@ -99,11 +98,10 @@ FILE *fopen(const char *pathname, const char *mode) {
     real_fopen = (FILE *(*)(const char *, const char *))dlsym(RTLD_NEXT, "fopen");
   }
   if (strcmp(pathname, "/dev/random") == 0 || strcmp(pathname, "/dev/urandom") == 0) {
-    if (!std::filesystem::exists("../random")) {
-      std::cerr << "../random" << " does not exist\n";
-      exit(1);
+    if (!std::filesystem::exists("./fake_random")) {
+      system("head -c 10000000 /dev/zero > ./fake_random");
     }
-      return real_fopen("../random", mode);
+      return real_fopen("./fake_random", mode);
   }
   FILE *result = real_fopen(pathname, mode);
 
