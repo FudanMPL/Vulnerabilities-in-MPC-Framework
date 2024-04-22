@@ -1,6 +1,6 @@
 # Vulnerabilities-in-MPC-Framework
 
-In this project, we report our found vulnerabilities in MPC Frameworks by simulating an active adversary, and provide instructions to reproduce the vulnerabilities.
+In this project, we report our found vulnerabilities in MPC Frameworks, and provide instructions to reproduce the vulnerabilities. Most of these vulnerabilities are triggered by simulating an active adversary.
 
 ## Environment Requirement
 
