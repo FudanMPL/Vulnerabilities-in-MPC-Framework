@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 3.23)
 project(socket_hook)
 set(CMAKE_CXX_COMPILER "clang++") # Set the compiler to clang++
 
