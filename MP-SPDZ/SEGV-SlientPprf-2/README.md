@@ -12,14 +12,19 @@ commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
 
 ### Replay
 
-1. Download the source code of MP-SPDZ and change the working directory to MP-SPDZ/ 
+1. Download the source code of MP-SPDZ, change the working directory to MP-SPDZ/, and compile it
 
-2. Add the following code to Makefile
+```
+cd MP-SPDZ/
+make -j 8 tldr
+```
+
+
+2. Add the following code to Makefile of MP-SPDZ 
 
 ```
 CFLAGS +=  -fsanitize=address -g 
 ```
-
 3. Modify sysRandomSeed in MP-SPDZ/deps/libOTe/cryptoTools/cryptoTools/Common/Defines.cpp as follows:
 
 ```
@@ -40,9 +45,9 @@ CFLAGS +=  -fsanitize=address -g
 4. Compile spdz2k-party.x of MP-SPDZ
 
 ```
+make clean
 make -j 8 spdz2k-party.x
 ```
-
 5. Add the following test.mpc to MP-SPDZ/Programs/Source/ and complie it with compile.py of MP-SPDZ
 
 ```
