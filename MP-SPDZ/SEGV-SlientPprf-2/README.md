@@ -1,14 +1,26 @@
 ## SEGV in SilentPprf.cpp
 
 
+### CVE ID
+
+CVE-2024-33783
+
+### Affected Product
+
+MP-SPDZ
+
+### Affected Version
+
+v0.3.8
+
+commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
+
+
 ### Description
 
 SEGV MP-SPDZ/deps/libOTe/libOTe/Tools/SilentPprf.cpp:1083:47 in osuCrypto::SilentMultiPprfReceiver::expand
 
 
-### Version
-
-commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
 
 ### Replay
 

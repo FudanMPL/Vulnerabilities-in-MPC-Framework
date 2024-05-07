@@ -1,13 +1,33 @@
 ## SEGV in SilentPprf.cpp
 
 
+
+### CVE ID
+
+CVE-2024-33780
+
+### Affected Product
+
+MP-SPDZ
+
+### Affected Version
+
+v0.3.8
+
+commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
+
+
+### Vulnerability Type
+
+Buffer Overflow
+
+
 ### Description
+
+MP-SPDZ v0.3.8 was discovered to contain a segmentation violation via the function osuCrypto::copyOut at /Tools/SilentPprf.cpp. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted message.
 
 SEGV MP-SPDZ/deps/libOTe/libOTe/Tools/SilentPprf.cpp:140:41 in osuCrypto::copyOut
 
-### Version
-
-commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
 
 ### Replay
 

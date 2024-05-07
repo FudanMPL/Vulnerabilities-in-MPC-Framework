@@ -1,14 +1,34 @@
 ## stack-buffer-overflow in OTExtensionWithMatrix.cpp
 
 
+
+### CVE ID
+
+CVE-2024-33782
+
+### Affected Product
+
+MP-SPDZ
+
+### Affected Version
+
+v0.3.8
+
+commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
+
+
+### Vulnerability Type
+
+Buffer Overflow
+
+
 ### Description
+
+MP-SPDZ v0.3.8 was discovered to contain a stack overflow via the function OTExtensionWithMatrix::extend in /OT/OTExtensionWithMatrix.cpp. This vulnerability allows attackers to cause a Denial of Service (DoS) via a crafted message.
 
 stack-buffer-overflow MP-SPDZ/OT/OTExtensionWithMatrix.cpp:134:5 in OTExtensionWithMatrix::extend
 
 
-### Version
-
-commit: a4f08e6ca9d0cfd439fbb1bd366edf91a61e9196
 
 ### Replay
 
