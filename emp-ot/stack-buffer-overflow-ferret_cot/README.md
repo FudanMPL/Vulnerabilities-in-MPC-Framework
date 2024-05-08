@@ -1,16 +1,32 @@
 ## SEGV in ferret_cot.hpp
 
+### CVE ID
+
+CVE-2024-31803
+
+### Affected Product
+
+emp-ot
+
+### Affected Version
+
+release 0.2.4
+
+commit: eb0daf2a7a88c44b419f6d1276dc19e66f80776f
+
+
+### Vulnerability Type
+
+Buffer Overflow
+
 
 ### Description
 
-stack-buffer-overflow in void FerretCOT::read_pre_data128_from_file
+Buffer Overflow vulnerability in emp-ot v.0.2.4 allows a remote attacker to execute arbitrary code via the FerretCOT<T>::read_pre_data128_from_file function.
 
 emp-ot/emp-ot/ferret/ferret_cot.hpp:199 emp::FerretCOTemp::NetIO::read_pre_data128_from_file
 
 
-### Version
-
-commit: eb0daf2a7a88c44b419f6d1276dc19e66f80776f
 
 ### Replay
 
